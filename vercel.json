@@ -1,0 +1,21 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "index.mjs",
+			"use": "@vercel/node"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "index.mjs"
+		}
+	],
+	"crons": [
+		{
+			"path": "/api/notification/schedule",
+			"schedule": "0 12 * * *" 
+		}
+	]
+}

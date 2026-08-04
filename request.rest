@@ -1,0 +1,148 @@
+POST https://www.contractsfinder.service.gov.uk/api/rest/2/search_notices/json
+Content-Type: application/json
+
+{
+  "searchCriteria": {
+    "statuses": [
+      "Open"
+    ],
+    "publishedFrom": "2025-02-13T00:00:00.000Z",
+    "publishedTo": "2025-02-14T23:00:00.000Z",
+    "keyword": "Domiciliary Care",
+    "cpvCodes": ["85000000"]
+  },
+  "size": 10
+}
+
+###
+
+GET https://www.contractsfinder.service.gov.uk/api/rest/2/get_published_notice/json/5cc301d6-02e5-41a7-a102-a11453aa1d8d
+
+{
+    "codes": "45440000"
+}
+
+
+###
+
+POST https://caresynctender-backend.vercel.app/api/admin/auth/login
+Content-Type: application/json
+
+{
+  "email": "caresynctender@gmail.com",
+  "password": "care.Sync.Tender@001."
+}
+
+
+###
+
+POST http://localhost:4000/api/admin/tender/retrieve
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{"page":1,"pageSize":15,"isApproved":false,"isDeleted":null,"isNewTender":null,"title":[],"regions":[],"contracts":[],"period":null}
+
+###
+
+GET http://localhost:4000/api/tender/getall
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+###
+
+GET http://localhost:4000/api/tender/getalldetails
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+###
+
+POST http://localhost:4000/api/tender/retryfaileddetails
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+###
+
+GET http://localhost:4000/api/notification/schedule
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+
+###
+
+GET https://caresynctender-backend.vercel.app/api/notification/schedule
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+###
+
+GET https://caresynctender-backend.vercel.app/api/tender/delete-expired
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+
+###
+
+GET http://localhost:4000/api/tender/delete-expired
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+###
+
+GET https://caresynctender-backend.vercel.app/api/notification/schedule
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{
+  "period": "this month"
+}
+
+###
+
+POST https://caresynctender-backend.vercel.app/api/curl
+Content-Type: application/json
+Authorization: Basic clevic:oosadamen 
+
+{
+  "url": "https://legitdataway.com/api/user",
+  "method": "POST",
+  "body": "",
+  "headers": {
+    "Authorization": "Basic Y2xldmljOm9vc2FkYW1lbg=="
+  }
+}
+
+
+###
+POST https://my.careagencymedia.co.uk/client/tenders/frontend
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2Nzg2M2RjOWJmN2VhYjI1YzY3MmFhOGQiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3Mzg1NDMwODcsImV4cCI6Mzc5MjQ0NjE0Nn0.lvnZMMOmnEFqZjs5oryS5AKk7tEm-3oiwFkKnsPPiUw
+
+{"search":"","filter":"all","page":{"history":"","current":1},"order":"-1","field":"createdAt","limit":2500,"skip":0,"type":["SAYP"],"sortBy":{},"region":"","isAnalysisCompleted":false}
