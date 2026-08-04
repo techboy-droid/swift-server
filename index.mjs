@@ -14,8 +14,8 @@ const httpServer = http.Server(app);
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:3001",
-  "https://caboluxurytransportationandshipping.com",
-  "https://admin.caboluxurytransportationandshipping.com",
+  "https://swifthaullogisticsandtransportation.com",
+  "https://admin.swifthaullogisticsandtransportation.com",
 ];
 
 const corsOptions = {
