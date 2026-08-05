@@ -47,8 +47,9 @@ const deleteLogistic = async (req, res) => {
 const getLogistic = async (req, res) => {
   try {
     const { id } = req.params;
+    const trimmedId = id.trim(); // Trim whitespace from the tracking number
     const logistic = await Logistic.findOne({
-      trackingNumber: id,
+      trackingNumber: trimmedId,
     });
 
     if (!logistic) {
@@ -84,7 +85,7 @@ const updateEventsController = async (req, res) => {
     },
     {
       new: true,
-    }
+    },
   );
 
   res.status(200).json({
@@ -113,7 +114,7 @@ const deleteEventsController = async (req, res) => {
     },
     {
       new: true,
-    }
+    },
   );
 
   res.status(200).json(updatedLogistic);
@@ -168,7 +169,7 @@ const getDashboardStats = async (req, res) => {
         day: dayNames[dayStart.getDay()],
         date: dayStart.toISOString().slice(0, 10),
         count: logistics.filter(
-          (l) => l.createdAt && l.createdAt >= dayStart && l.createdAt < dayEnd
+          (l) => l.createdAt && l.createdAt >= dayStart && l.createdAt < dayEnd,
         ).length,
       });
     }
